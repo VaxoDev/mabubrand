@@ -659,9 +659,7 @@
                     <li>
                         <a class="contact" href="#contact">Contact</a>
                     </li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="cta">
                 <a href="mabubrand.html" class="btn">Explore</a>
@@ -754,7 +752,7 @@
                     </a>
                     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
                     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<!--                     <span class="author">Coded by <b><a href="https://github.com/vaxovaxo123"
+                    <!-- <span class="author">Coded by <b><a href="https://github.com/vaxovaxo123"
                                 target="_blank">&nbsp;Vakho Miqashavidze</a></b></span> -->
             </footer>
         </div>
@@ -801,27 +799,6 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/a4eded6e28.js" crossorigin="anonymous"></script>
-    <script>
-        var navMenu = document.querySelector('nav ul');
-        var menuToggle = document.querySelector('.fa-bars');
-        var menuClose = document.querySelector('.fa-xmark');
-
-        menuToggle.addEventListener('click', function () {
-            navMenu.classList.add('open');
-        });
-
-        menuClose.addEventListener('click', function () {
-            navMenu.classList.remove('open');
-        });
-
-        window.addEventListener('click', function (event) {
-            if (!event.target.matches('.fa-bars') && !event.target.matches('.fa-xmark')) {
-                if (navMenu.classList.contains('open')) {
-                    navMenu.classList.remove('open');
-                }
-            }
-        });
-    </script>
 </body>
 
 </html>
