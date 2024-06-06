@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="ka-GE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="mabubrand,Women's clothing brand &#183; OWN DESIGN  &#183;">
+    <link rel="shortcut icon" type="x-icon" href="mabubrandlogo.png">
+    <title>MabuBrand</title>
+    <style>
+        * {
+            transition: all 0.5s ease-in-out;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .container1 {
+            text-align: center;
+            width: 100%;
+            height: 100vh;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 2vw 4vw;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        form h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form input,
+        form textarea {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+            outline: none;
+            background-color: #f5f5f5;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 15px;
+            background-color: #ff5361;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            width: 200px;
+            margin: 20px auto 0;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #e04355;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            direction: rtl;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            background-color: transparent;
+            position: static;
+            padding: 0;
+            transition: none;
+            z-index: auto;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+            font-weight: bold;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            position: relative;
+        }
+
+        nav .fa-solid {
+            display: none;
+        }
+
+        nav ul.open {
+            right: 0;
+        }
+
+        .cta .btn {
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .dark-theme {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            color: #fff;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .hero-content .btn {
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .about-us {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .about-us h2 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content p {
+            color: #fff;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .footer h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .footer .social-links ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer .social-links ul li {
+            margin: 0 10px;
+        }
+
+        .footer .social-links ul li a {
+            color: #fff;
+            font-size: 24px;
+        }
+
+
+        footer {
+            background-color: hsl(0, 0%, 20%);
+            color: hsl(0, 0%, 100%);
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            height: auto;
+        }
+
+        .best-seller {
+            background-color: #333;
+            width: 250px;
+            height: auto;
+            border: 3px solid hsl(0, 0%, 25%);
+            border-radius: 35px;
+            padding: 20px;
+            margin: 5px auto;
+            text-align: center;
+            cursor: pointer;
+            flex-basis: 2;
+            margin-bottom: 100px;
+            cursor: default;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .best-seller-div {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        .best-seller img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            cursor: default;
+        }
+
+        .best-seller h2 {
+            color: #ffff;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .best-seller p {
+            color: #fff;
+            margin: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: inherit;
+            border-bottom: 1px transparent;
+        }
+
+        .instagram-logo {
+            height: 35px;
+            width: 35px;
+        }
+
+        .facebook-logo {
+            height: 35px;
+            width: 35px;
+            margin-left: 30px;
+        }
+
+        .facebook-logo:hover {
+            transform: translateY(-25px);
+            transition: all 0.5s ease-in-out;
+            opacity: 0.65;
+        }
+
+        .instagram-logo:hover {
+            transform: translateY(-25px);
+            transition: all 0.5s ease-in-out;
+            opacity: 0.65;
+        }
+
+        .facebook-logo:active {
+            transform: scale(2);
+        }
+
+        .instagram-logo:active {
+            transform: scale(2);
+        }
+
+        .best-seller:hover {
+            transform: translateY(-45px);
+        }
+
+        .home:hover {
+            text-decoration: underline;
+            opacity: 0.65;
+        }
+
+        .shop:hover {
+            text-decoration: underline;
+            opacity: 0.65;
+        }
+
+        h1 {
+            display: inline-block;
+            font-size: 25px;
+        }
+
+        .about:hover {
+            text-decoration: underline;
+            opacity: 0.65;
+        }
+
+
+        .contact:hover {
+            text-decoration: underline;
+            opacity: 0.65;
+        }
+
+        .btn:hover {
+            transform: translateY(-10px);
+            opacity: 0.65;
+            transition: 1s ease-in-out, 1s ease-in-out;
+        }
+
+        .price-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .price {
+            font-size: 18px;
+            background-color: transparent;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        .price-tag {
+            margin: 0;
+        }
+
+        .purchase {
+            background-color: rgb(255, 255, 0);
+            border: none;
+            border-radius: 15px;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            height: 30px;
+            width: 100px;
+            font-weight: 900;
+            font-size: 16px;
+        }
+
+        #purchase-form {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: transparent;
+        }
+
+        .form-content {
+            background-color: transparent;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border: 1px solid transparent;
+            width: 80%;
+            max-width: 600px;
+            max-height: 120%;
+            overflow-y: auto;
+        }
+
+        .author {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .close {
+            font-size: 30px;
+            font-weight: 900;
+            color: white;
+            position: fixed;
+        }
+
+        nav .fa-xmark {
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            .logo img {
+                height: 40px;
+            }
+
+            .cta .btn {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+
+            .instagram-logo:hover {
+                transform: none;
+                transition: none;
+            }
+
+            .facebook-logo:hover {
+                transform: none;
+                transition: none;
+            }
+
+            .instagram-logo:active {
+                transform: none;
+                transition: none;
+            }
+
+            .facebook-logo:active {
+                transform: none;
+                transition: none;
+            }
+
+            .hero {
+                padding: 80px 0;
+            }
+
+            .hero-content h1 {
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+
+            .hero-content p {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+
+            .form-content {
+                background-color: transparent;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 20px;
+                border: 1px solid transparent;
+                width: 80%;
+                max-width: 600px;
+                height: 120%;
+                overflow: none;
+                width: 90%;
+                margin: 25% auto;
+            }
+
+            .best-seller:hover {
+                transform: none;
+                transition: none;
+                box-shadow: none;
+            }
+
+            .best-seller:active {
+                transform: none;
+                transition: none;
+                box-shadow: none;
+            }
+
+            .about-us h2 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .about-content p {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+
+            .footer {
+                padding: 30px 0;
+            }
+
+            .footer h3 {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            .footer p {
+                font-size: 12px;
+                margin-bottom: 3px;
+            }
+
+            .footer .social-links ul li a {
+                font-size: 18px;
+            }
+
+            .best-seller img {
+                width: 100%;
+                border-radius: 25px;
+            }
+
+            .best-seller:hover {
+                transition: none;
+            }
+
+            .best-seller {
+                width: 250px;
+            }
+
+            .best-seller h2 {
+                font-size: 30px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            .best-seller p {
+                font-size: 20px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            nav {
+                display: block;
+                height: 150%;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(29, 0, 0);
+                position: fixed;
+                top: -15px;
+                right: -200px;
+                bottom: 0;
+                padding: 20px;
+                width: 50px;
+                height: 100%;
+                border-radius: 15px;
+            }
+
+            nav ul.open {
+                display: flex;
+            }
+
+            nav ul li {
+                margin-bottom: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            nav .fa-solid {
+                display: flex;
+                top: 20px;
+                right: 20px;
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            .fa-bars {
+                font-size: 50px;
+            }
+
+            .best-seller:active {
+                transition: none;
+            }
+
+            form h1 {
+                font-size: 20px;
+            }
+
+            form input,
+            form textarea {
+                font-size: 14px;
+            }
+
+            form button {
+                font-size: 16px;
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="dark-theme">
+        <div class="container">
+            <div class="logo">
+                <a href="#header">
+                    <img src="mabubrand.png" alt="MabuBrand">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="home" href="#header">Home</a>
+                    </li>
+                    <li>
+                        <a class="shop" href="mabubrand.html">Shop</a>
+                    </li>
+                    <li>
+                        <a class="about" href="#about">about</a>
+                    </li>
+                    <li>
+                        <a class="best-seller-href" href="#bs">Best Sellers</a>
+                    </li>
+                    <li>
+                        <a class="contact" href="#contact">Contact</a>
+                    </li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="cta">
+                <a href="mabubrand.html" class="btn">Explore</a>
+            </div>
+        </div>
+    </header>
+    <section class="hero dark-theme">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to MabuBrand</h1>
+                <p>MabuBrand, Women 's clothing brand &#183; OWN DESIGN &#183;</p>
+                <a href="mabubrand.html" class="btn">Shop Now</a>
+            </div>
+        </div>
+    </section>
+    <section class="about-us dark-theme">
+        <div class="container">
+            <div id="about" class="about-content">
+                <p>MabuBrand is a leading women's clothing store dedicated to providing high-quality fashion items for
+                    modern women. Our mission is to empower women to feel confident and beautiful in their own skin.
+                </p>
+                <p>With a focus on sustainable and ethically sourced materials, we strive to create stylish and
+                    eco-friendly clothing that not only looks good but also feels good to wear.
+                </p>
+                <p>Join us in our journey to redefine women's fashion and make a positive impact on the world.
+                </p>
+            </div>
+        </div>
+        <div id="bs" class="best-seller-div">
+            <h1>Best sellers 🔥</h1>
+            <div class="container">
+                <div class="best-seller">
+                    <img src="test.jpeg" alt="best seller's Image">
+                    <h2>პროდუქტის სახელი</h2>
+                    <p>პროდუქტის დახასიათება დაიწერება აქ</p>
+                    <p class="price-wrapper">
+                        <ion-icon class="price-tag" name="pricetags-sharp"></ion-icon>
+                        <button class="price">100 ₾</button>
+                        <button class="purchase">Purchase</button>
+                    </p>
+                </div>
+
+                <div class="best-seller">
+                    <img src="test.jpeg" alt="best seller's Image">
+                    <h2>პროდუქტის სახელი</h2>
+                    <p>პროდუქტის დახასიათება დაიწერება აქ</p>
+                    <p class="price-wrapper">
+                        <ion-icon class="price-tag" name="pricetags-sharp"></ion-icon>
+                        <button class="price">100 ₾</button>
+                        <button class="purchase">Purchase</button>
+                    </p>
+                </div>
+
+                <div class="best-seller">
+                    <img src="test.jpeg" alt="best seller's Image">
+                    <h2>პროდუქტის სახელი</h2>
+                    <p>პროდუქტის დახასიათება დაიწერება აქ</p>
+                    <p class="price-wrapper">
+                        <ion-icon class="price-tag" name="pricetags-sharp"></ion-icon>
+                        <button class="price">100 ₾</button>
+                        <button class="purchase">Purchase</button>
+                    </p>
+                </div>
+
+                <div class="best-seller">
+                    <img src="test.jpeg" alt="best seller's Image">
+                    <h2>პროდუქტის სახელი</h2>
+                    <p>პროდუქტის დახასიათება დაიწერება აქ</p>
+                    <p class="price-wrapper">
+                        <ion-icon class="price-tag" name="pricetags-sharp"></ion-icon>
+                        <button class="price">100 ₾</button>
+                        <button class="purchase">Purchase</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <footer id="contact">
+                <h2 class="cmh">
+                    Contact me here &darr;
+                </h2>
+                <p>
+                    <a class="instagram-logo" href="https://www.instagram.com/mabu_brand" target="_blank">
+                        <ion-icon class="instagram-logo" name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61554919794933" target="_blank">
+                        <ion-icon class="facebook-logo" name="logo-facebook"></ion-icon>
+                    </a>
+                    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+                    <span class="author">Coded by <b><a href="https://github.com/vaxovaxo123"
+                                target="_blank">&nbsp;Vakho Miqashavidze</a></b></span>
+            </footer>
+        </div>
+    </footer>
+
+    <div id="purchase-form">
+        <div class="form-content">
+            <span class="close">&times;</span>
+            <div class="container1">
+                <form>
+                    <h1>Purchase,Contact</h1>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <input type="text" id="phone" placeholder="Your Phone Number" required>
+                    <textarea id="msg" rows="4" placeholder="The Item You Want To Purchase,Your Height etc..."
+                        required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const purchaseButtons = document.querySelectorAll('.purchase');
+        const purchaseForm = document.getElementById('purchase-form');
+        const closeButton = document.getElementsByClassName("close")[0];
+
+        purchaseButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                purchaseForm.style.display = 'block';
+            });
+        });
+
+        closeButton.onclick = function () {
+            purchaseForm.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == purchaseForm) {
+                purchaseForm.style.display = "none";
+            }
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/a4eded6e28.js" crossorigin="anonymous"></script>
+    <script>
+        var navMenu = document.querySelector('nav ul');
+        var menuToggle = document.querySelector('.fa-bars');
+        var menuClose = document.querySelector('.fa-xmark');
+
+        menuToggle.addEventListener('click', function () {
+            navMenu.classList.add('open');
+        });
+
+        menuClose.addEventListener('click', function () {
+            navMenu.classList.remove('open');
+        });
+
+        window.addEventListener('click', function (event) {
+            if (!event.target.matches('.fa-bars') && !event.target.matches('.fa-xmark')) {
+                if (navMenu.classList.contains('open')) {
+                    navMenu.classList.remove('open');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
