@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+}
+
+.order-summary,
+.checkout-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary {
+    width: 45%;
+}
+
+.checkout-form {
+    width: 50%;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.order-total {
+    margin-top: 20px;
+    border-top: 2px solid #333;
+    padding-top: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.card-info {
+    margin-bottom: 10px;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-details input {
+    width: 48%;
+}
+
+.btn-complete-order {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-complete-order:hover {
+    background-color: #45a049;
+}
+
+.remove-item {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.remove-item:hover {
+    background-color: #ff3333;
+}
+
+@media (max-width: 426px) {
+    .order-summary{
+        height: auto;
+        width: 250px;
+    }
+    .checkout-container {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .cart-item {
+        flex-wrap: wrap;
+    }
+
+    .cart-item>* {
+        margin-bottom: 5px;
+    }
+
+    .card-details {
+        flex-direction: column;
+    }
+
+    .card-details input {
+        width: 100%;
+    }
+}

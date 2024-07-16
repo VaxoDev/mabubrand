@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ab aa af ak sq am ar an hy as av ae az bm eu be bn bh bi bs br bg my ca ch ce ny zh co cr hr cs da dv nl dz en eo et ee fo fj fi fr ff gl ka de el gn gu ht ha he hz hi ho hu ia id ie ga ig ik io is it iu ja jv kl kn kr ks kk km ki rw ky kv kg ko ku kj la lb lg li ln lo lt lu lv gv mk mg ms ml mt mi mr mh mn na nv nd ne ng nb nn no ii nr oc oj cu om or os pa pi fa pl ps pt qu rm rn ro ru sa sc sd se sm sg sr gd sn si sk sl so st es su sw ss sv ta te tg th ti bo tk tl tn to tr ts tt tw ty ug uk ur uz ve vi vo wa cy wo fy xh yi yo za zu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>გადახდა - MabuBrand</title>
+    <link rel="stylesheet" href="checkout-styles.css">
+    <link rel="shortcut icon" type="x-icon" href="images/mabubrandlogo.png">
+</head>
+<body>
+    <div class="container">
+        <h1>გადახდა</h1>
+        <div class="checkout-container">
+            <div class="order-summary">
+                <h2>ინფორმაცია</h2>
+                <div id="cart-items">
+                </div>
+                <div class="order-total">
+                    <p>პროდუქტის ღირებულება: <span id="subtotal"></span></p>
+                    <p>მიწოდება: <span id="delivery-price"></span></p>
+                    <p><strong>ჯამური ღირებულება: <span id="total-price"></span></strong></p>
+                </div>
+            </div>
+            <div class="checkout-form">
+                <h2>მიწოდების ინფორმაცია</h2>
+                <form id="checkout-form">
+                    <input type="text" placeholder="სახელი და გვარი" required>
+                    <input type="text" placeholder="მისამართი (ზუსტი)" required>
+                    <input type="text" placeholder="ქალაქი" required>
+                    <input type="tel" placeholder="ტელეფონის ნომერი" required>
+                    
+                    <h2>გადახდის ინფორმაცია</h2>
+                    <div class="card-info">
+                        <input type="text" placeholder="Card Number" required>
+                        <div class="card-details">
+                            <input type="text" placeholder="MM/YY" required>
+                            <input type="text" placeholder="CVV" required>
+                        </div>
+                    </div>
+                    
+                    <p>სავარაუდო მიწოდების დრო: <span id="delivery-time"></span></p>
+                    <button type="submit" class="btn-complete-order">გადახდა</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/checkout.js"></script>
+</body>
+</html>
